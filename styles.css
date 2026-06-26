@@ -105,9 +105,9 @@ a {
 #scroll-canvas {
   position: sticky;
   top: 0;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  left: 0;
   width: 100vw;
+  margin-left: calc(-50vw + 50%);
   height: 100vh;
   object-fit: cover;
   z-index: 0;
@@ -117,10 +117,11 @@ a {
 .scroll-overlay {
   position: sticky;
   top: 0;
-  left: 50%;
-  transform: translate3d(-50%, -100vh, 0);
+  left: 0;
   width: 100vw;
+  margin-left: calc(-50vw + 50%);
   height: 100vh;
+  margin-top: -100vh;
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
@@ -914,6 +915,12 @@ a {
     flex-wrap: nowrap;
   }
 
+  #scroll-canvas,
+  .scroll-overlay {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
 
   .header__logo {
     position: relative;
