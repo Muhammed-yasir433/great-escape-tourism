@@ -235,7 +235,11 @@ if (canvas) {
 
   window.addEventListener('scroll', onScroll);
 
+  let lastWidth = window.innerWidth;
   window.addEventListener('resize', () => {
+    if (window.innerWidth === lastWidth) return;
+    lastWidth = window.innerWidth;
+
     measureTitleTransition();
     // Redraw current state on resize
     if (statsSection) {
@@ -365,5 +369,26 @@ if (menuToggle && headerNav) {
       headerNav.classList.remove('header__nav--open');
     }
   });
+}
+
+// ─── Package Cards Scroll Entrance Animation ───
+const packagesGrid = document.querySelector('.packages__grid');
+if (packagesGrid) {
+  const cards = packagesGrid.querySelectorAll('.package-card');
+  const packagesObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, index * 80);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08
+  });
+  packagesObserver.observe(packagesGrid);
 }
 
