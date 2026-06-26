@@ -915,6 +915,13 @@ a {
     flex-wrap: nowrap;
   }
 
+  #scroll-canvas,
+  .scroll-overlay {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
+
   .header__logo {
     position: relative;
     left: 0;

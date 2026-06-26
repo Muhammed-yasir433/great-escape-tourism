@@ -371,24 +371,23 @@ if (menuToggle && headerNav) {
   });
 }
 
-// ─── Package Cards Scroll Entrance Animation ───
-const packagesGrid = document.querySelector('.packages__grid');
-if (packagesGrid) {
-  const cards = packagesGrid.querySelectorAll('.package-card');
-  const packagesObserver = new IntersectionObserver((entries, observer) => {
+// ─── Package Cards Scroll Entrance Animation (One-by-one on Scroll) ───
+const packageCards = document.querySelectorAll('.package-card');
+if (packageCards.length > 0) {
+  const cardObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add('visible');
-          }, index * 80);
-        });
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.08
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
   });
-  packagesObserver.observe(packagesGrid);
+
+  packageCards.forEach((card) => {
+    cardObserver.observe(card);
+  });
 }
 
