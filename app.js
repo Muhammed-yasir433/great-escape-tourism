@@ -336,3 +336,34 @@ document.querySelectorAll('.package-card').forEach((card) => {
 
   infoEl.appendChild(cta);
 });
+
+// ─── Hamburger Menu Mobile Drawer Toggle ───
+const menuToggle = document.getElementById('menu-toggle');
+const headerNav = document.getElementById('header-nav');
+
+if (menuToggle && headerNav) {
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuToggle.classList.toggle('active');
+    headerNav.classList.toggle('header__nav--open');
+  });
+
+  // Close menu when clicking on any link
+  document.querySelectorAll('.header__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      headerNav.classList.remove('header__nav--open');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (headerNav.classList.contains('header__nav--open') && 
+        !headerNav.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+      menuToggle.classList.remove('active');
+      headerNav.classList.remove('header__nav--open');
+    }
+  });
+}
+
