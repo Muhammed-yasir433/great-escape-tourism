@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Great Escapes Tourism | Premium Travel & Luxury Tours</title>
+  <meta name="description" content="Explore breathtaking destinations, unforgettable experiences, and personalized travel packages designed to make every trip memorable.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="spinner"></div>
+      <div class="preloader-text">Loading Experience... <span id="preloader-percent">0%</span></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="scroll-section-container">
+      <canvas id="scroll-canvas"></canvas>
+      <div class="scroll-overlay">
+        <img src="assets/images/hero-overlay-ab595d.png" alt="">
+      </div>
+
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <header class="header">
+          <div class="header__inner">
+            <a href="#home" class="header__logo">
+              <img src="assets/images/logo.png" alt="Great Escapes Tourism">
+            </a>
+            <nav class="header__nav" aria-label="Main navigation">
+              <div class="header__nav-links">
+                <a href="#home" class="header__link">Home</a>
+                <a href="#about" class="header__link">About us</a>
+                <a href="#packages" class="header__link">Packages</a>
+                <a href="#reviews" class="header__link">Reviews</a>
+                <a href="#contact" class="header__link">Contact us</a>
+              </div>
+              <div class="header__social">
+                <a href="#" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+                <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+                <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <div class="hero__content">
+          <h1 class="hero__title" id="animated-title">Great Escapes<br>Tourism</h1>
+          <p class="hero__subtitle">Explore breathtaking destinations, unforgettable experiences, and personalized travel packages designed to make every trip memorable. From serene natural landscapes to vibrant cultural attractions, embark on journeys that inspire, connect, and transform the way you experience the world.</p>
+          <a href="#packages" class="hero__cta">
+            <span>Explore Now</span>
+            <img src="assets/icons/arrow-right.svg" alt="">
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about" id="about">
+        <div class="about__content">
+          <div id="about-title-slot"></div>
+          <p class="about__text">Great Escape Tourism helps travelers discover amazing destinations, plan unforgettable journeys, and enjoy hassle-free travel experiences. Our platform offers curated travel packages, personalized recommendations, and seamless booking solutions to make every trip memorable.<br><br>Why Choose Us?</p>
+
+          <div class="why-us">
+            <div class="why-us__item why-us__item--left">
+              <h3 class="why-us__heading">Why Choose Us?</h3>
+              <p class="why-us__text">Explore Top Destinations – Discover breathtaking places around the world.</p>
+            </div>
+            <div class="why-us__item why-us__item--center">
+              <h3 class="why-us__heading">Why Choose Us?</h3>
+              <p class="why-us__text why-us__text--right">Memorable Experiences – Enjoy personalized adventures tailored to your interests.</p>
+            </div>
+            <div class="why-us__item why-us__item--right">
+              <h3 class="why-us__heading">Why Choose Us?</h3>
+              <p class="why-us__text why-us__text--right">Easy Trip Planning – Book tours, stays, and travel services effortlessly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stats__inner">
+        <div class="stat">
+          <img src="assets/icons/map-icon.svg" alt="" class="stat__icon">
+          <p class="stat__value"><span class="stat__number">200</span><span class="stat__accent">+</span></p>
+          <p class="stat__label">Destination covered</p>
+        </div>
+        <div class="stat">
+          <img src="assets/icons/people-icon.svg" alt="" class="stat__icon">
+          <p class="stat__value"><span class="stat__number">1</span><span class="stat__accent">k</span></p>
+          <p class="stat__label">Happy Client</p>
+        </div>
+        <div class="stat">
+          <img src="assets/icons/support-icon.svg" alt="" class="stat__icon">
+          <p class="stat__value"><span class="stat__number">24</span><span class="stat__accent">/</span><span class="stat__number">7</span></p>
+          <p class="stat__label">Luxury Support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages" id="packages">
+      <div class="packages__header">
+        <h2 class="packages__title">Premium Travel Packages</h2>
+        <p class="packages__subtitle">Handcrafted journeys designed with heart.</p>
+      </div>
+
+      <div class="packages__grid">
+        <article class="package-card">
+          <img src="assets/images/dubai.png" alt="Dubai">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Dubai</h3>
+            <p>Explore Dubai's Iconic Attractions</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/nepal.png" alt="Nepal">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info package-card__info--lg">
+            <h3>Nepal</h3>
+            <p>Experience Nepal Beyond Expectations</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/georgia-4510d2.png" alt="Georgia">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info package-card__info--lg">
+            <h3>Georgia</h3>
+            <p>Ancient, Beautiful, Vibrant, Memorable</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/umrah-46eaea.png" alt="Umrah">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Umrah</h3>
+            <p>A Blessed Spiritual Journey</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/saudi-arabia-71af1e.png" alt="Saudi Arabia">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Saudi Arabia</h3>
+            <p>Explore Saudi's Majestic Landscapes</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/azerbaijan.png" alt="Azerbaijan">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Azerbaijan</h3>
+            <p>Explore Azerbaijan's Hidden Treasures</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/qatar.png" alt="Qatar">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Qatar</h3>
+            <p>Modern, Elegant, Vibrant, Welcoming</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/oman.png" alt="Oman">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Oman</h3>
+            <p>Desert, Mountains, Beaches, Heritage</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/turkey.png" alt="Turkey">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Turkey</h3>
+            <p>Experience Turkey Beyond Expectations</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/armenia.png" alt="Armenia">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Armenia</h3>
+            <p>Discover Dreams, Create Memories</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/jordan.png" alt="Jordan">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Jordan</h3>
+            <p>Experience Jordan's Magical Landscapes</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/kenya.png" alt="Kenya">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Kenya</h3>
+            <p>Experience Kenya Beyond Expectations</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/hatta.png" alt="Hatta">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Hatta</h3>
+            <p>Journey Beyond Every Horizon</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/almaty.png" alt="Almaty">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Almaty</h3>
+            <p>Experience Almaty's Natural Wonders</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/musandam.png" alt="Musandam">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Musandam</h3>
+            <p>Discover Musandam's Hidden Paradise</p>
+          </div>
+        </article>
+        <article class="package-card">
+          <img src="assets/images/desert-safari.png" alt="Desert Safari">
+          <div class="package-card__overlay"></div>
+          <div class="package-card__info">
+            <h3>Desert Safari</h3>
+            <p>Journey Beyond Every Horizon</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+      <div class="reviews__header">
+        <h2 class="reviews__title">Customer Reviews</h2>
+        <div class="reviews__rating-row">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt="">
+          </div>
+          <p class="reviews__subtitle">Based on 100+ Reviews</p>
+        </div>
+      </div>
+
+      <div class="reviews__grid">
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--purple" aria-hidden="true">s</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Prompt and excellent service at all times which exceeded our expectations! Will definitely recommend GET tourism to my family, friends and colleagues. A big thank to ibrahim pookkath. for being extremely helpful!</p>
+            <span class="review-card__name">salim liberty</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--brown" aria-hidden="true">z</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>No hassle in booking flights with Great Escapes, prompt and excellent service! Will definitely recommend!<br>Special thanks to Safli, very helpful and responsive!</p>
+            <span class="review-card__name">Zandra Celendron</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--dark-green" aria-hidden="true">s</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Excellent service provided by them, highly recommend.Very good service ever seen, nice hospitality.</p>
+            <span class="review-card__name">Saravanan K</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--navy" aria-hidden="true">Y</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Very good service ever seen, nice hospitality.</p>
+            <span class="review-card__name">Yuvan Peter</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--navy" aria-hidden="true">s</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Excellent service provided by them, highly recommend.Very good service ever seen, nice hospitality.</p>
+            <span class="review-card__name">Saravanan K</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--purple" aria-hidden="true">A</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Very good experience i got them very good treating also i am very satisfied with them</p>
+            <span class="review-card__name">Alan Raj</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--red" aria-hidden="true">s</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>It is most satisfying and excellent service around.<br>Will recommend again and again.</p>
+            <span class="review-card__name">Shashi Verma</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--purple" aria-hidden="true">M</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Their customer service is excellent and we had a nice experience with their team.</p>
+            <span class="review-card__name">Manjusha Babu</span>
+          </div>
+        </article>
+
+        <article class="review-card review-card--featured">
+          <div class="review-card__avatar review-card__avatar--navy review-card__avatar--lg" aria-hidden="true">s</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>"I recently booked a vacation through Escapes Tourism, and I couldn't be happier with the experience. From start to finish, they provided top-notch service. The staff was incredibly helpful and knowledgeable, guiding me through the entire process. The accommodations they recommended were fantastic, and the itinerary they planned for us was perfect. I highly recommend Escapes Tourism for anyone looking for a stress-free and memorable vacation. Thank you for making our trip so special!"</p>
+            <span class="review-card__name">Shinan Kk</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__avatar review-card__avatar--red" aria-hidden="true">H</div>
+          <div class="review-card__body">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <p>Thank you, Great Escapes Tourism, for making my travel experience memorable and stress-free!</p>
+            <span class="review-card__name">hiba rameez</span>
+          </div>
+        </article>
+
+        <article class="review-card review-card--cta">
+          <div class="review-card__body review-card__body--center">
+            <div class="stars"><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""><img src="assets/icons/star.svg" alt=""></div>
+            <a href="#reviews" class="review-card__more">
+              <span class="review-card__more-icon">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>View more reviews</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <hr class="footer__divider">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <h2 class="section-title section-title--md">Great Escapes<br>Tourism</h2>
+          <p class="footer__tagline">Turn your travel dreams into unforgettable memories. Explore breathtaking destinations, enjoy seamless travel planning, and experience personalized journeys crafted just for you.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a>
+            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#packages">Packages</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact Us</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h3>Our Office</h3>
+          <p class="footer__office-locations">Dubai<br>Mumbai</p>
+          <p class="footer__address">
+            <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46 0 0 2.46 0 5.5C0 9.625 5.5 13 5.5 13C5.5 13 11 9.625 11 5.5C11 2.46 8.54 0 5.5 0ZM5.5 7.438C4.155 7.438 3.063 6.345 3.063 5C3.063 3.655 4.155 2.563 5.5 2.563C6.845 2.563 7.938 3.655 7.938 5C7.938 6.345 6.845 7.438 5.5 7.438Z" fill="white"/></svg>
+            Opp: General Post Office, Dubai, United Arab Emirates 111113
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Direct Contact</h3>
+          <a href="tel:+971504274260" class="footer__contact-item">
+            <img src="assets/icons/phone.svg" alt="">
+            +97150 427 4260
+          </a>
+          <a href="tel:+971544722088" class="footer__contact-item">
+            <img src="assets/icons/phone.svg" alt="">
+            +971 54 472 2088
+          </a>
+          <a href="tel:+971502023111" class="footer__contact-item">
+            <img src="assets/icons/phone.svg" alt="">
+            +971 50 202 3111
+          </a>
+          <a href="#" class="footer__whatsapp-btn">
+            <span>Enquire on whatsapp</span>
+            <img src="assets/icons/whatsapp.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <p>© 2026 Great Escapes Tourism. All Rights Reserved.</p>
+        <p>Designed By Muhammed Yasir V S</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
