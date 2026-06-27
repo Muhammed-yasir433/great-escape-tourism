@@ -487,6 +487,7 @@ a {
   font-size: clamp(28px, 3.5vw, 45px);
   font-weight: 600;
   line-height: 1.2;
+  color: var(--text-white);
 }
 
 .services__subtitle {
