@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 const navLinks = document.querySelectorAll('.header__link');
-const sections = ['home', 'about', 'services', 'packages', 'reviews', 'contact'].map((id) =>
+const sections = ['home', 'about', 'packages', 'services', 'reviews', 'contact'].map((id) =>
   document.getElementById(id)
 );
 
@@ -410,4 +410,24 @@ if (serviceCards.length > 0) {
     serviceObserver.observe(card);
   });
 }
+
+// ─── Dynamic WhatsApp CTA insertion for Service Cards ───
+document.querySelectorAll('.service-card').forEach((card) => {
+  const titleEl = card.querySelector('h3');
+  const serviceName = titleEl ? titleEl.textContent : 'Service';
+
+  // Create CTA link element
+  const cta = document.createElement('a');
+  cta.className = 'service-card__cta';
+  cta.href = `https://wa.me/971504274260?text=Hi,%20I'm%20interested%20in%20your%20${encodeURIComponent(serviceName)}%20service.`;
+  cta.target = '_blank';
+
+  // Set inner HTML (Text + SVG icon)
+  cta.innerHTML = `
+    <span>Enquire on WhatsApp</span>
+    <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+  `;
+
+  card.appendChild(cta);
+});
 

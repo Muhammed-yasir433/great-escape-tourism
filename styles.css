@@ -494,6 +494,9 @@ a {
 }
 
 .service-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--card-radius);
@@ -502,7 +505,8 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 16px;
+  justify-content: flex-start;
+  overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
               background-color 0.4s ease,
               border-color 0.4s ease,
@@ -521,10 +525,10 @@ a {
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(5, 13, 26, 0.3) 100%);
+  border-color: rgba(25, 108, 181, 0.45);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(25, 108, 181, 0.12);
 }
 
 .service-card__icon-wrapper {
@@ -535,14 +539,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.4s ease, 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
 }
 
 .service-card:hover .service-card__icon-wrapper {
-  transform: scale(1.1) rotate(5deg);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px) scale(1.08) rotate(5deg);
+  background: rgba(25, 108, 181, 0.15);
   border-color: var(--accent-yellow);
+  box-shadow: 0 0 12px rgba(254, 211, 37, 0.25);
 }
 
 .service-card__icon-wrapper svg {
@@ -566,6 +574,11 @@ a {
   line-height: 1.4;
   color: var(--text-white);
   letter-spacing: 0.5px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-card:hover h3 {
+  transform: translateY(-3px);
 }
 
 .service-card p {
@@ -574,6 +587,54 @@ a {
   font-weight: 500;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+}
+
+.service-card:hover p {
+  transform: translateY(-2px);
+  opacity: 0.25;
+}
+
+/* ─── Service Card WhatsApp CTA ─── */
+.service-card__cta {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 19px;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.3s ease;
+  pointer-events: none;
+}
+
+.service-card__cta img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.service-card__cta:hover {
+  background: #128c7e;
+}
+
+.service-card:hover .service-card__cta {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* ─── Packages ─── */
@@ -1156,6 +1217,35 @@ a {
 
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    height: 260px;
+  }
+
+  .service-card .service-card__icon-wrapper {
+    transform: translateY(-4px) scale(1.04) rotate(2deg);
+    background: rgba(25, 108, 181, 0.12);
+    border-color: var(--accent-yellow);
+  }
+
+  .service-card .service-card__icon-wrapper svg {
+    stroke: var(--accent-yellow);
+  }
+
+  .service-card h3 {
+    transform: translateY(-3px);
+  }
+
+  .service-card p {
+    transform: translateY(-2px);
+    opacity: 0.65;
+  }
+
+  .service-card .service-card__cta {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
