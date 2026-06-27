@@ -31,7 +31,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 body {
@@ -92,7 +91,7 @@ a {
 .hero {
   position: relative;
   min-height: 720px;
-  padding: 3px var(--page-gutter) 80px;
+  padding: 160px var(--page-gutter) 80px;
   margin-top: -100vh;
   z-index: 2;
 }
@@ -1318,6 +1317,7 @@ a {
 
   .hero {
     min-height: 600px;
+    padding-top: 100px;
   }
 
   .hero__content {
