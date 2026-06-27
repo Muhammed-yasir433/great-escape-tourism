@@ -29,6 +29,16 @@ const sections = ['home', 'about', 'packages', 'services', 'reviews', 'contact']
 );
 
 window.addEventListener('scroll', () => {
+  // Sticky header shrink state toggle
+  const header = document.querySelector('.header');
+  if (header) {
+    if (window.scrollY > 50) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  }
+
   const scrollPos = window.scrollY + 120;
 
   // Check if we are in the home section
