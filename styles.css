@@ -403,6 +403,8 @@ a {
 /* ─── Stats ─── */
 .stats {
   padding: 48px var(--page-gutter) 64px;
+  position: relative;
+  z-index: 2;
 }
 
 .stats__inner {
@@ -640,6 +642,8 @@ a {
 /* ─── Packages ─── */
 .packages {
   padding: 0 var(--page-gutter) 80px;
+  position: relative;
+  z-index: 2;
 }
 
 .packages__header {
@@ -774,6 +778,8 @@ a {
 /* ─── Reviews ─── */
 .reviews {
   padding: 80px var(--page-gutter) 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .reviews__header {
