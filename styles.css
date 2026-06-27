@@ -102,15 +102,6 @@ a {
   width: 100%;
 }
 
-.scroll-section-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 13, 26, 0.55);
-  z-index: 1;
-  pointer-events: none;
-}
-
 #scroll-canvas {
   position: sticky;
   top: 0;
@@ -411,7 +402,8 @@ a {
 
 /* ─── Stats ─── */
 .stats {
-  padding: 48px var(--page-gutter) 64px;
+  padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 .stats,
@@ -420,6 +412,11 @@ a {
 .reviews {
   position: relative;
   z-index: 2;
+  background: rgba(5, 13, 26, 0.45);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50% + var(--page-gutter));
+  padding-right: calc(50vw - 50% + var(--page-gutter));
 }
 
 .stats__inner {
@@ -476,9 +473,8 @@ a {
 
 /* ─── Services ─── */
 .services {
-  padding: 80px var(--page-gutter);
-  position: relative;
-  z-index: 2;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .services__header {
@@ -514,10 +510,8 @@ a {
   position: relative;
   width: 100%;
   height: 250px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--card-radius);
   padding: 32px 24px;
   display: flex;
@@ -526,12 +520,14 @@ a {
   text-align: center;
   justify-content: flex-start;
   overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
               background-color 0.4s ease,
               border-color 0.4s ease,
               box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-              opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-              backdrop-filter 0.4s ease;
+              backdrop-filter 0.4s ease,
+              opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
 
   /* Entrance animation starting state */
@@ -545,10 +541,10 @@ a {
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   border-color: rgba(25, 108, 181, 0.5);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   transform: translateY(-8px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(25, 108, 181, 0.15);
 }
@@ -661,7 +657,8 @@ a {
 
 /* ─── Packages ─── */
 .packages {
-  padding: 0 var(--page-gutter) 80px;
+  padding-top: 0;
+  padding-bottom: 80px;
 }
 
 .packages__header {
@@ -795,7 +792,8 @@ a {
 
 /* ─── Reviews ─── */
 .reviews {
-  padding: 80px var(--page-gutter) 100px;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .reviews__header {
