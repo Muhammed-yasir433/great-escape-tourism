@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 const navLinks = document.querySelectorAll('.header__link');
-const sections = ['home', 'about', 'packages', 'reviews', 'contact'].map((id) =>
+const sections = ['home', 'about', 'services', 'packages', 'reviews', 'contact'].map((id) =>
   document.getElementById(id)
 );
 
@@ -388,6 +388,26 @@ if (packageCards.length > 0) {
 
   packageCards.forEach((card) => {
     cardObserver.observe(card);
+  });
+}
+
+// ─── Service Cards Scroll Entrance Animation (One-by-one on Scroll) ───
+const serviceCards = document.querySelectorAll('.service-card');
+if (serviceCards.length > 0) {
+  const serviceObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  serviceCards.forEach((card) => {
+    serviceObserver.observe(card);
   });
 }
 
