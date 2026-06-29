@@ -331,7 +331,10 @@ a {
   font-size: clamp(48px, 8.4vw, 107px);
   font-weight: 700;
   line-height: 0.86;
-  color: var(--text-white);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero__subtitle {
@@ -1000,13 +1003,6 @@ a {
   padding-bottom: 48px;
 }
 
-.footer__brand h2 {
-  color: var(--text-white);
-  background: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-}
-
 .footer__tagline {
   margin-top: 16px;
   max-width: 431px;
@@ -1118,6 +1114,17 @@ a {
   font-weight: 600;
   line-height: 18px;
   color: #000000;
+}
+
+.footer__designer-link {
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer__designer-link:hover {
+  opacity: 0.65;
+  text-decoration: underline;
 }
 
 /* ─── Responsive ─── */
