@@ -331,10 +331,7 @@ a {
   font-size: clamp(48px, 8.4vw, 107px);
   font-weight: 700;
   line-height: 0.86;
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-white);
 }
 
 .hero__subtitle {
@@ -1001,6 +998,13 @@ a {
   grid-template-columns: 1.4fr 0.7fr 0.9fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
+}
+
+.footer__brand h2 {
+  color: var(--text-white);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
 }
 
 .footer__tagline {
